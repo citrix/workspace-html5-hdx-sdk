@@ -1,8 +1,8 @@
-# HDX SDK for HTML5
+# Citrix Workspace app for HTML5 HDX 1808 SDK
 
 ## Introduction
 
-Citrix Receiver for HTML5 enhances support for HDX and SDK sessions by enabling you to customize your delivery model for Citrix hosted apps and desktops through your website. This feature is particularly useful for building a rich app experience in your Enterprise portals. It can be used to provide a rich app experience for users as a service when hosting Citrix Receiver for HTML5 on your web server while launching Citrix hosted apps and desktops from your website.
+Citrix Workspace app for HTML5 1808 enhances support for HDX and SDK sessions by enabling you to customize your delivery model for Citrix hosted apps and desktops through your website. This feature is particularly useful for building a rich app experience in your Enterprise portals. It can be used to provide a rich app experience for users as a service when hosting Citrix Workspace app for HTML5 on your web server while launching Citrix hosted apps and desktops from your website.
 
 ## Getting Started
 
@@ -15,4 +15,3 @@ Citrix Receiver for HTML5 enhances support for HDX and SDK sessions by enabling 
 6.  Start the session by passing ICA. You can refer to [StoreFront Web APIs](https://www.citrix.com/downloads/storefront-web-interface/sdks/storefront-services-api-30.html) to fetch ICA.
 
 Click [here](./citrix-receiver) to access the full API documentation.
-

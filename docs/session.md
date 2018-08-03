@@ -396,7 +396,7 @@ var customToolbarData = [{"id" :"help","config":{"position":"rear","imageUrl":"h
 sessionObject.addToolbarBtns(customToolbarData);
 ```
 
-**Example 2:** Adding back and forward buttons that allows navigation of the webpage in browser and position is set to front (added after receiver button).
+**Example 2:** Adding back and forward buttons that allows navigation of the webpage in browser and position is set to front (added after Workspace app button).
 
 ```
 function backButtonHandler(eventObj){

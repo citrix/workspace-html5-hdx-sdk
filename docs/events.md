@@ -42,7 +42,7 @@ Raised when the connection with the server is closed.
 
 ## <a name ="onerror"> onError </a>
 
-Raised on occurrence of any error in Citrix Receiver.
+Raised on occurrence of any error in Citrix Workspace app for HTML5.
 
 ### Type
 

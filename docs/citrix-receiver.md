@@ -12,7 +12,7 @@ citrix.receiver
 
   Name          | Type                                   | Description
   --------------|----------------------------------------|-----------------------------
-  `apiVersion`  | <span class="param-type">String</span> | HTML5 receiver API version.
+  `apiVersion`  | <span class="param-type">String</span> | Workspace app for HTML5 API version.
 
 ## Methods
 <span class="type-signature">(static) </span>createSession<span class="signature">(id<span class="signature-attributes">opt</span>, connectionParams, onSessionCreated)</span><span class="type-signature"></span>
