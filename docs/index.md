@@ -12,6 +12,6 @@ Citrix Workspace app 1808 for HTML5 enhances support for HDX and SDK sessions by
 3.  Set the full path of HTML5 Client.
 4.  Set the connection parameters for launching the session.
 5.  Attach the events if required.
-6.  Start the session by passing ICA. You can refer to [StoreFront Web APIs](https://www.citrix.com/downloads/storefront-web-interface/sdks/storefront-services-api-30.html) to fetch ICA.
+6.  Start the session by passing ICA. You can refer to [StoreFront Web APIs](https://www.citrix.com/downloads/storefront/sdks/storefront-services-api-30.html) to fetch ICA.
 
 Click [here](./citrix-receiver) to access the full API documentation.
