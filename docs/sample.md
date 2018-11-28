@@ -1,6 +1,6 @@
 # SDK Example
 
-Refer the end-to-end example in the download. This [link](https://www.citrix.com/downloads/citrix-receiver/html5/receiver-for-html5-sdk-latest#ctx-dl-eula) contains examples to integrate with StoreFront SDK and Workspace app for HTML5 SDK.
+Refer the end-to-end example in the download. This [link](https://www.citrix.com/downloads/workspace-app/html5/workspace-app-for-html5-sdk-latest.html) contains examples to integrate with StoreFront SDK and Workspace app for HTML5 SDK.
 
 ## Steps to run the SDK sample page:
 
