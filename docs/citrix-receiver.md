@@ -8,7 +8,7 @@ citrix.receiver
 ## Members 
 <span class="type-signature">(readonly) </span>`apiVersion`<span class="type-signature"></span> 
 
-###Properties:
+### Properties:
 
   Name          | Type                                   | Description
   --------------|----------------------------------------|-----------------------------
