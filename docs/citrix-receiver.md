@@ -127,7 +127,7 @@ Type
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](/ReceiverError)</span>
   
 
-Example
+#### Example
 
 ````js
 Example 1 : Always use HTML5 Workspace app from CDN
