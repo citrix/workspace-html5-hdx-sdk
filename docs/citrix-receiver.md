@@ -1,14 +1,14 @@
 # Namespace: receiver
 
 
-##receiver
+## receiver
 citrix.receiver
 
 
 ## Members 
 <span class="type-signature">(readonly) </span>`apiVersion`<span class="type-signature"></span> 
 
-###Properties:
+### Properties:
 
   Name          | Type                                   | Description
   --------------|----------------------------------------|-----------------------------
@@ -35,94 +35,116 @@ Type
 
 #### Example
 
+````js
 Following code launches an app/desktop in an iframe. Setting preferences to hide the in-session toolbar.
 
-````js
-try{
-    citrix.receiver.setPath("http://html5client_hosted_url/");
-    var id = "session1"; //Optional parameter
-    var connectionParams = {
-            "launchType" : "embed",
-            "container" : {
-                "type" : "iframe",
-                "value" : "sessionIframe"
-            },
-            "preferences" : {
-                "ui" : {
-                    "toolbar" : {
-                        "menubar" : false
-                    }
-                }
-            }
-        };
-    function sessionCreated(sessionObject){
-        
-        //Handle session interactions like events, start, disconnect here.              
-        // Adding onConnection event handler
-        function connectionHandler(event){
-            console.log("Event Received : " + event.type);
-            console.log(event.data);        
-        }               
-        sessionObject.addListener("onConnection",connectionHandler);
-        // Adding onConnectionClosed event handler
-        function connectionClosedHandler(event){
-            console.log("Event Received : " + event.type);      
-            console.log(event.data);        
-        }
-        sessionObject.addListener("onConnectionClosed",connectionClosedHandler);
+try{			
 
-        // Adding onError event handler
-        function onErrorHandler(event){
-            console.log("Event Received : " + event.type);      
-            console.log(event.data);
-        }
-        sessionObject.addListener("onError",onErrorHandler);
+	citrix.receiver.setPath("CDN"); //Uses the latest build from CDN. Refer setPath for more information			
 
-        //Adding onURLRedirection event handler
-        function onURLRedirectionHandler(event){
-            console.log("Event Received : " + event.type);      
-            console.log(event.data);
-        }
-        sessionObject.addListener("onURLRedirection",onURLRedirectionHandler);
-    
-        //ICADATA has been constructed for example. Recommending to use StoreFront/WebInterface SDK to get ICA. 
-        //Refer session.start() for more details.
-        var icaData = {
-            "Domain":"abcd",
-            "ClearPassword":"xxxxxxxxx",
-            "InitialProgram":"#Desktop",
-            "Title":"Desktop",
-            "Address":"xx.xx.xx.xx",
-            "Username":"xyz"                
-        };
-        var launchData = {"type" :"json",value :icaData};   
-        sessionObject.start(launchData);
-    }
-    citrix.receiver.createSession(id,connectionParams,sessionCreated);
+	var id = "session1"; //Optional parameter
+	var connectionParams = {
+			"launchType" : "embed",
+			"container" : {
+				"type" : "iframe",
+				"value" : "sessionIframe"
+			},
+			"preferences" : {
+				"ui" : {
+					"toolbar" : {
+						"menubar" : false
+					}
+				}
+			}
+		};
+
+	function sessionCreated(sessionObject){
+		//Handle session interactions like events, start, disconnect here.				
+		// Adding onConnection event handler
+		function connectionHandler(event){
+			console.log("Event Received : " + event.type);
+			console.log(event.data);		
+		}				
+		sessionObject.addListener("onConnection",connectionHandler);
+
+		// Adding onConnectionClosed event handler
+		function connectionClosedHandler(event){
+			console.log("Event Received : " + event.type);		
+			console.log(event.data);		
+		}
+		sessionObject.addListener("onConnectionClosed",connectionClosedHandler);
+
+		// Adding onError event handler
+		function onErrorHandler(event){
+			console.log("Event Received : " + event.type);		
+			console.log(event.data);
+		}
+		sessionObject.addListener("onError",onErrorHandler);
+
+		//Adding onURLRedirection event handler
+		function onURLRedirectionHandler(event){
+			console.log("Event Received : " + event.type);		
+			console.log(event.data);
+		}
+		sessionObject.addListener("onURLRedirection",onURLRedirectionHandler);
+	
+  		//ICADATA has been constructed for example. Recommending to use StoreFront/WebInterface SDK to get ICA. 
+		//Refer session.start() for more details.
+		var icaData = {
+			"Domain":"abcd",
+			"ClearPassword":"xxxxxxxxx",
+			"InitialProgram":"#Desktop",
+			"Title":"Desktop",
+			"Address":"xx.xx.xx.xx",
+			"Username":"xyz"				
+		};
+		var launchData = {"type" :"json",value :icaData};	
+		sessionObject.start(launchData);
+	}
+	citrix.receiver.createSession(id,connectionParams,sessionCreated);
 }catch(ex){
-    console.log(ex);
+	console.log(ex);
 }
 ````
 
 ## Methods  
-<span class="type-signature">(static) </span>setPath<span class="signature">(path)</span><span class="type-signature"></span> {#.setPath .name}
+(static) setPath(pathopt, fallbackPathopt)
 
-Sets the HTML5Engine Path. Must be set before creating a session.  
+Sets the preference to use the latest HTML5 workspace app build from CDN or use the location of HTML5 Workspace app build hosted by customer to launch app/desktop sessions.
 
 #### Parameters:
 
-  Name    | Type                                    | Description
-  --------| ----------------------------------------| -----------------------------
-  `path`  | <span class="param-type">string</span>  | Path of HTML5Client folder.
-  
-#### Throws:
-    Path is empty.
+| Name | Type | Attributes | Description |
+|---|---|---|---|
+| `path` | string | &lt;optional&gt; | Passing "CDN" would consume the latest HTML5 Workspace app build from Citrix CDN.<br> However, this can be overridden by setting path with the location of HTML5 Workspace app build hosted by customer.<br> Defaults to CDN. |
+| `fallbackPath`	 | string |&lt;optional&gt; | If CDN is not reachable then the HTML5 Workspace app build is picked from the location set using fallbackPath. |
 
+#### Throws:
+
+HTML5 Engine Path or fallback path is invalid.
 
 Type   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](/ReceiverError)</span>
   
-<span class="type-signature">(static) </span>viewLog<span class="signature">()</span><span class="type-signature"></span> {#.viewLog .name}
+
+#### Example
+
+````js
+Example 1 : Always use HTML5 Workspace app from CDN
+
+citrix.receiver.setPath("CDN");
+
+Example 2 : Always use the HTML5 Workspace app hosted by customer
+
+citrix.receiver.setPath("http://html5client_hosted_url/");
+
+Example 3 : Use HTML5 Workspace app from CDN. If CDN is not reachable then use from the fallback path 
+
+citrix.receiver.setPath("CDN","http://html5client_hosted_url/");
+//Note : In case fallbackPath is also not reachable then exception would be thrown.
+````
+
+(static) viewLog()
 
 
 Opens the logging page in a new tab.HTML5Engine Path should be set
@@ -130,7 +152,7 @@ before calling this API.
 
   
 #### Throws:
-HTML5 Engine Path is not set.
+HTML5 Engine Path is invalid. 
 
 Type  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](/ReceiverError)</span>
