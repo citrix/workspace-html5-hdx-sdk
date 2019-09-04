@@ -1,8 +1,8 @@
-# Citrix Workspace app 1908 for HTML5 HDX SDK
+# Citrix Workspace app for HTML5 HDX SDK
 
 ## Introduction
 
-Citrix Workspace app 1908 for HTML5 enhances support for HDX and SDK sessions by enabling you to customize your delivery model for Citrix hosted apps and desktops through your website. This feature is particularly useful for building a rich app experience in your Enterprise portals. It can be used to provide a rich app experience for users as a service when hosting Citrix Workspace app for HTML5 on your web server while launching Citrix hosted apps and desktops from your website.
+Citrix Workspace app for HTML5 enhances support for HDX and SDK sessions by enabling you to customize your delivery model for Citrix hosted apps and desktops through your website. This feature is particularly useful for building a rich app experience in your Enterprise portals. It can be used to provide a rich app experience for users as a service when hosting Citrix Workspace app for HTML5 on your web server while launching Citrix hosted apps and desktops from your website.
 
 ## Getting Started
 
