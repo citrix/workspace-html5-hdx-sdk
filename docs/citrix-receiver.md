@@ -24,14 +24,14 @@ Creates a new session and returns session instance through callback. Use session
 | Name | Type | Attributes | Description |
 |---|---|---|---|
 | `id` | string | &lt;optional&gt; | ID that is assigned when the session is created |
-| `connectionParams`	 | [connectionParams](./global#connectionparams) | | Configuration options to create the session |
-| `onSessionCreated` | [onSessionCreated](./global#onsessioncreated) | | Callback containing the session object created. Signature sample below: <br> `function <function_name>(session_object){...}` | 
+| `connectionParams`	 | [connectionParams](../global#connectionparams) | | Configuration options to create the session |
+| `onSessionCreated` | [onSessionCreated](../global#onsessioncreated) | | Callback containing the session object created. Signature sample below: <br> `function <function_name>(session_object){...}` | 
 
 #### Throws:
 Unable to create session object.
 
 Type   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](/ReceiverError)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](../ReceiverError)</span>
 
 #### Example
 
@@ -124,7 +124,7 @@ Sets the preference to use the latest HTML5 workspace app build from CDN or use 
 HTML5 Engine Path or fallback path is invalid.
 
 Type   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](/ReceiverError)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](../ReceiverError)</span>
   
 
 #### Example
@@ -155,6 +155,4 @@ before calling this API.
 HTML5 Engine Path is invalid. 
 
 Type  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](/ReceiverError)</span>
-
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">[ReceiverError](../ReceiverError)</span>
