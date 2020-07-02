@@ -7,7 +7,7 @@
 
 Configuration options to create the session.
 
-#### Type:
+#### Type
 
 >-   <span class="param-type">Object</span>
 
@@ -66,25 +66,31 @@ connectionParams full example
 }
 ```
   
-### <a name="eventlistener"> eventListener </a>
+### <a name="eventlistener"> eventListener(event) </a>
 
 Listener to handle the events.
 
-#### Parameters:
+#### Parameters
   
 <table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>event</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Object as appropriate to the eventType registered.</td></tr></tbody></table>
 
-#### Properties:
-  
-<table class="props"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>event.id</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Id of the session object.</td></tr><tr> <td class="name"><code>event.type</code></td><td class="type"> <span class="param-type">String</span> </td><td class="description last">Event Type triggered.</td></tr><tr> <td class="name"><code>event.data</code></td><td class="type"> <span class="param-type">Object</span> </td><td class="description last">Data as appropriate to the event triggered.<br><br><a href="/Session#~event:onConnection">onConnection</a><br><a href="/Session#~event:onConnectionClosed">onConnectionClosed</a><br><a href="/Session#~event:onURLRedirection">onURLRedirection</a><br><a href="/Session#~event:onError">onError</a><br></td></tr></tbody></table>
+#### Properties
 
-### <a name="onsessioncreated"></a>onSessionCreated
+| Name | Type | Description |
+|---|---|---|
+| `event.id` | String | Id of the session object. |
+| `event.type` | String | Event Type triggered. |
+| `event.data` | Object | Data as appropriate to the event triggered. <br> - [onConnection](../events#onconnection) <br> - [onConnectionClosed](../events#onconnectionclosed) <br> - [onURLRedirection](../events#onurlredirection) <br> - [onError](../events#onerror) <br> - [onResize](../events#onresize) |
+
+### <a name="onsessioncreated"></a>onSessionCreated(sessionObject)
 
 Callback having the session object created.
 
-#### Parameters:
-  
-<table class="params"> <thead> <tr> <th>Name</th> <th>Type</th> <th class="last">Description</th> </tr></thead> <tbody> <tr> <td class="name"><code>sessionObject</code></td><td class="type"> <span class="param-type"><a href="/Session">Session</a></span> </td><td class="description last">Session object to interact with the session like register and handle events, start and disconnect.</td></tr></tbody></table>
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| `sessionObject` | [Session](../session) | Session object to interact with the session like register and handle events, start and disconnect. |
 
 #### Example
 
