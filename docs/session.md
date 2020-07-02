@@ -138,8 +138,8 @@ Registers the eventListener on the eventType.
 
 | Name | Type | Description |
 |---|---|---|
-| `eventType` | String | Type of the event for which the listener needs to be attached. Supported event types: <br> - [onConnection](./events#onconnection) <br> - [onConnectionClosed](./events#onconnectionclosed) <br> - [onURLRedirection](./events#onurlredirection) <br> - [onError](./events#onerror) |
-| `eventListener` | [eventListener](./global#eventlistener) | Listener to handle the event |
+| `eventType` | String | Type of the event for which the listener needs to be attached. Supported event types: <br> - [onConnection](../events#onconnection) <br> - [onConnectionClosed](../events#onconnectionclosed) <br> - [onURLRedirection](../events#onurlredirection) <br> - [onError](../events#onerror) <br> - [onResize](../events#onresize) |
+| `eventListener` | [eventListener](../global#eventlistener) | Listener to handle the event |
 
 #### Example 
 
@@ -171,6 +171,13 @@ function onURLRedirectionHandler(event){
 	console.log(event.data);
 }
 sessionObject.addListener("onURLRedirection",onURLRedirectionHandler);
+
+//Adding onResize event handler
+function onResizeHandler(event){
+	console.log("Event Received : " + event.type);		
+	console.log(event.data);
+}
+sessionObject.addListener("onResize",onResizeHandler);
 ```
 ### (inner) addToolbarBtns(customToolbarData)
 
@@ -489,8 +496,8 @@ Removes the eventListener on the eventType.
 
 | Name | Type | Description |
 |---|---|---|
-| `eventType` | String | Type of the event for which the listener needs to be removed. Supported event types: <br> - [onConnection](./events#onconnection) <br> - [onConnectionClosed](./events#onconnectionclosed) <br> - [onURLRedirection](./events#onurlredirection) <br> - [onError](./events#onerror) |
-| `eventListener` | [eventListener](./global#eventlistener) | Listener to handle the event |
+| `eventType` | String | Type of the event for which the listener needs to be removed. Supported event types: <br> - [onConnection](../events#onconnection) <br> - [onConnectionClosed](../events#onconnectionclosed) <br> - [onURLRedirection](../events#onurlredirection) <br> - [onError](../events#onerror) <br> - [onResize](../events#onresize) |
+| `eventListener` | [eventListener](../global#eventlistener) | Listener to handle the event |
 
 #### Example
 

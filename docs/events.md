@@ -68,7 +68,35 @@ object
 		}
 }	
 ```
-						
+
+## onResize
+
+Triggered during the start and end of resize within the Citrix Workspace app session.
+
+### Type
+
+object
+
+### Properties
+
+| Name | Type | Description |
+|---|---|---|
+| `state` | String | Represents the state of session resize: "start": Start of session resize and the resize overlay gets displayed. |
+
+### Example
+
+Sample event object generated for onResize event.
+
+```
+{
+	"id":"<session id>",
+	"type" : "onResize",
+	"data":{
+			"state":"start"
+		}
+}
+```
+
 ## onToolbarBtnClick_btn_id
 
 Raised when the custom toolbar button with id equal to btn_id is clicked.
