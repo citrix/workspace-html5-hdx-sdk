@@ -81,7 +81,7 @@ object
 
 | Name | Type | Description |
 |---|---|---|
-| `state` | String | Represents the state of session resize: "start": Start of session resize and the resize overlay gets displayed. |
+| `state` | String | Represents the state of session resize: <br>"start" : Start of session resize and the resize overlay gets displayed. <br>"end" : End of session resize and the resize overlay is hidden. |
 
 ### Example
 
